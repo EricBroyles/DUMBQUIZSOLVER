@@ -1,0 +1,71 @@
+Futures markets trade standardized futures contracts, which means futures that share an underlying asset are interchangeable. They have certain terms that are clearly defined by the futures contract and are usually summed up the contract specifications.
+
+Contract specifications can be thought of as the agreement between the buyer or seller of the futures contract and the exchange that lists and clears that futures contract. Knowing a futures contract’s specification is important because it outlines the contract’s terms and obligations. Additionally, it may provide insights into how the contract will price and behave versus the underlying physical product or index.
+
+In this module, we will consider the contract specifications for U.S. Treasury futures. CME Group lists active futures on U.S. Treasuries at numerous points along yield curve. Each futures contract has its own contract specifications; some contracts have similar terms while other terms are specific to a unique contract.
+
+Identifying Maturity Points
+To begin, we will need to identify the maturity points of the actively traded U.S. Treasury futures curve. Be advised that the futures contract name may not perfectly reflect that contract’s true deliverable U.S. Treasury security maturity. Currently CME Group has  2-Year Note, 5-Year Note, 10-Year Note, Ultra 10-Year Note, U.S. Bond and Ultra Bond futures contracts. 
+
+Important Specifications
+We will explore the following specifications that are necessary for you to understand the contract structure, pricing and quotation mechanism, and delivery grade securities that provide the underlying product and trading cycle:
+
+Contract size
+Contract factor
+Delivery grade for final settlement
+Price quotation
+Minimum price fluctuation (tick size)
+Listed contract months
+Termination of trading (last trading day)
+The 2-Year Note
+The 2-Year Note has a contract size of $200,000 face-value per contract. This size is unique to 2-Year Notes as all other active U.S. Treasury futures have a face value of $100,000.
+
+When calculating a 2-Year Note’s invoice amount, CME Group calculations sometimes refer to a contract factor. The contract factor for 2-Year Notes is $2,000 per contract. The delivery grade of a U.S. Treasury futures contract refers to the U.S. Treasury securities eligible to be delivered into the futures contract that will fulfil the terms for final settlement.
+
+All CME Group U.S. Treasury futures contracts settle to a physical delivery of an underlying U.S. Treasury note or bond. But each individual contract has its own list of securities that can be delivered. In other words, the short position, responsible for making delivery, cannot simply pick any government security and deliver it to the long position, responsible for accepting and paying for delivery. The short position must choose from one of several securities eligible according to the contract specifications.
+
+For 2-Year Note futures, the eligible securities are defined as, U.S. Treasury notes with an original term to maturity of not more than five years and three months and a remaining term to maturity of not less than one year and nine months from the first day of the delivery month and a remaining term to maturity of not more than two years from the last day of the delivery month. The invoice price equals the futures settlement price times a conversion factor, plus accrued interest. The conversion factor is the price of the delivered note ($1 par value) to yield 6 percent. (Source: 2-Year Note Contract Specifications).
+
+2-Year Note futures trade in points and fractions of 1/32 of a point. The smallest increment a 2-Year Note futures contract can trade in is a 1/8 of a 1/32. Since the 2-Year Note has a face-value of $200,000 per contract 1/32 is equal to $62.50 per contract. Therefore, the minimum tick, or smallest increment of price change, is 1/8 of 1/32 a tick is worth 0.125 x $62.50 or $7.8125 per contract.
+
+Learn more about U.S. Treasury pricing.
+
+2-Year Note futures list three consecutively quarterly contract months at a time following the March, June, September, and December expiration cycle.  
+
+Termination of trading, also known as last trading day (LTD), is the last business day of a quarterly contract month. The last delivery day (LDD) is three business days after the last business day of a quarterly contract month. 
+
+The 5-Year Note
+5-Year Note futures are similar to 2-Years in their listing cycle; they are listed in three consecutive quarterly expiration months following the March, June, September, December cycle. 5-Year Notes have a face value of $100,000 per contract and a contract factor of $1,000 per contract.
+
+The deliverable grade for 5-Year Notes is, U.S. Treasury notes with an original term to maturity of not more than five years and three months and a remaining term to maturity of not less than four years and two months as of the first day of the delivery month. The invoice price equals the futures settlement price times a conversion factor, plus accrued interest. The conversion factor is the price of the delivered note ($1 par value) to yield 6 percent. (Source: 5-Year Note specifications)
+
+Like all U.S. Treasury futures, 5-Year Note futures trade in points and fractions of a 1/32. The minimum price fluctuation, or tick size, is of a 1/32. Since the face value of the 5-Year Note future is $100,000 a 1/32 is worth $31.25, therefore of a 1/32 is equal to 0.25 x $31.25 = $7.8125, rounded to the nearest cent per contract.
+
+Last trading day  and last delivery day are the same as 2-Year Notes. LTD for 5-Year notes is the last business day of a quarterly contract month and LDD is three business days following the last business day of the quarterly contract month. 
+
+The 10-Year Note
+10-Year Notes and all the consecutively longer maturity contracts also have a $100,000 face value and $1,000 contract factor amount. The 10-Year Note’s delivery grade is, U.S. Treasury notes with a remaining term to maturity of at least six and a half years, but not more than 10 years, from the first day of the delivery month. The invoice price equals the futures settlement price times a conversion factor, plus accrued interest. The conversion factor is the price of the delivered note ($1 par value) to yield 6 percent. (Source: 10-Year Note specifications)
+
+10-Year Note futures minimum price fluctuation, or tick size, is  of 1/32. Therefore, the minimum price change would be 0.50 x $31.25 = $15.625, rounded to the nearest cent per contract. CME Group lists three consecutive quarterly contracts in 10-Year Notes.
+
+LTD and LDD are different than 2- and 5-Year Note futures. The 10-Year Note ceases trading (LTD) seven business days prior to the last business day of the quarterly contract month. The LDD for 10-Year Notes is the last business day of the quarterly contract month. 
+
+Ultra 10-Year Note
+Ultra 10-Year Notes list, price and trade just like the original 10-Year Notes described above.
+
+The only difference in specifications between the 10-Year Note and Ultra 10-Year note is in the delivery grade. Securities eligible for delivery into the Ultra 10-Year are referenced as, Original issue 10-Year U.S. Treasury notes with not less than 9 years 5 months and not more than 10 years of remaining term to maturity from first day of futures delivery month. The invoice price equals the futures settlement price times a conversion factor, plus accrued interest. The conversion factor is the price of the delivered note ($1 par value) to yield 6 percent. (source: Ultra 10-Year Note contract specifications).
+
+U.S. Treasury Bonds
+The original U.S. Treasury Bond contract, sometimes referred to as the Classic Bond, has a face value of $100,000 per contract and a contract factor of $1,000.
+
+Its deliverable grade is defined as, U.S. Treasury bonds that have remaining term to maturity of at least 15 years and less than 25 years from the first day of the futures delivery month.* The delivery invoice amount equals the futures settlement price times a conversion factor, plus accrued interest. The conversion factor is the price of the delivered bond ($1 par value) to yield 6 percent. (Source: U.S. Treasury Bond contract specifications)
+
+The minimum price fluctuation is 1/32 of a point or $31.25 per contract. CME Group lists three consecutive quarterly month contracts of this contract. Its LTD is seven business days prior to the last business day of the quarterly contract. LDD is the last business of the quarterly contract month.
+
+The Ultra Bond
+The Ultra-Bond contract is just like the Classic Bond except in deliverable grade terms.
+
+The delivery grade terms for the Ultra-Bond are, U.S. Treasury bonds with remaining term to maturity of not less than 25 years from the first day of the futures contract delivery month. The invoice price equals the futures settlement price times a conversion factor, plus accrued interest. The conversion factor is the price of the delivered bond ($1 par value) to yield 6 percent. (Source: Ultra Bond contract specifications).
+
+Summary
+Understanding how to read contract specifications is important because the specs define the terms and obligations of the buyers and sellers and may provide clues into how a contract prices versus its underlying product.

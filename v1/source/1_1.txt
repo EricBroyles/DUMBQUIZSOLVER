@@ -1,0 +1,50 @@
+At the expiration of a futures contract, the contract is usually settled one of two ways, through a physical settlement involving a delivery of the underlying product or by means of a financial, or cash, settlement to an index or widely accepted price benchmark.
+
+Knowing the final settlement process of a futures contract is important, even though most open futures positions never go all the way to expiration. Interest rate futures traded at CME Group are settled both financially and through physical delivery.
+
+U.S. Treasury notes and bonds are settled through physical-delivery. It is the prospect of having to make or take delivery of an actual U.S. Treasury security that imposes the pricing integrity to the U.S. Treasury futures market. Therefore, understanding the delivery process is essential to understanding how futures on U.S. Treasuries price and trade.
+
+Delivery Process
+The U.S. Treasury futures delivery process takes place over or near the quarterly contract delivery month. Quarterly contract months are defined by CME Group as March, June, September and December.
+
+The short (seller) position has all the optionality regarding delivery. This means the short position choses when to deliver and which eligible security to deliver based on the contract’s specifications and their own financial self-interest.
+
+The long (buyer) position is passive until assigned delivery by the clearing house. The short position may deliver security for contract on any business day of the expiring quarterly contract month. In this case, futures on U.S. Treasuries behave like an American-style option, in that the short can exercise its option before the last trading day of the contract. This is an important and defining feature.
+
+The actual delivery process is a three-day event. It is always three days and cannot be shortened nor extended. The three days are known as intention day, notice day and delivery day.
+
+Intention Day
+Because the delivery process is a three-day event and because the short can elect to deliver securities the first business day of the quarterly contract expiration month, it is necessary that the first intention day precede the first business by two business days. This date, two business days prior to the first business day of the expiration month, is first intention day, also known as first position day. 
+
+Example
+For the March 2017 contracts, the first business day of March 2017 is Wednesday, March 1. First position day would therefore be Monday, February 27, 2017. On February 27, an open long position could be subject to being assigned delivery of a U.S. Treasury security for settlement March 1.
+
+When a short futures position decides to make delivery, they must notify CME Clearing by 6 p.m. Central Time of their intention to deliver. This is where the name, intention day comes from.
+
+The short notifies CME Clearing of its intention to deliver, causing the process to begin. The first thing to note is that day’s official CME Group settlement price of the intended contract, which is now used to create the invoice amount for this delivery. Then CME Clearing assigns the delivery to the oldest outstanding long position. The longest, or oldest-dated longs, have the greatest chance of an early delivery.
+
+On intention day, the short position declares they are making delivery, final contract price is determined and the long position is assigned by CME Clearing.
+
+Notice Day
+Notice Day is when the short position declares which U.S. Treasury security they will deliver versus cash payment to the long position.
+
+The short must select a government security that fulfills the eligibility requirements determined by the contract specifications of the respective contract being delivered. Each eligible security has its own conversion factor, which is based on the security’s coupon, maturity date and the expiration date of the futures contract. This conversion factor is used along with the final futures price and accrued interest to determine the final invoice amount of the delivery.
+
+At the end of notice day, the second day in the three-day delivery process, the short and the long know the final price, security, conversion factor for the security and accrued interest of that security. They calculate, using those inputs, the invoice amount. CME Clearing confirms these amounts for each matched short versus long for that delivery and assures the respective parties have exchange bank wire instructions.
+
+Delivery Day
+Having confirmed all the details and instructions, all security versus cash transactions are completed by 1 p.m. on the third day, delivery day, and the delivery process is over.
+
+Large Open Interest Holders
+The possibility of an unexpected early delivery effects when the large open interest holders roll forward to the next quarterly contract.
+
+Because many large open interest holders do not want to assume the responsibility of delivery and want to avoid delivery completely, they chose to roll their positions into the next quarterly contract prior to intention day. By rolling forward early they avoid any chance of an unintended delivery.
+
+By rolling forward they also take liquidity in the front quarterly contract and transfer it to the next quarterly contract. Which causes the roll, or calendar spread, between front and next quarterly contract to be most liquid and tight during the last few days of the month preceding the quarterly expiration month. This is unique to physically-settled futures and distinct from cash-settled contracts.   
+
+Summary
+It is important to remember that this process may occur prior to the last trading day  of a contract. 10-year note and bond contracts cease trading seven business days prior to the last business day of a quarterly contract month and 2-year and 5-year notes cease trading the last business day of the month.
+
+If the short elects to deliver after last trading day, the final price on last trading day is used to determine the final invoice amount. Last delivery day  for 10-year notes and bonds is the last business day of the expiring quarterly contract month. Last delivery day for 2-year and 5-year notes is three days after the last business day of the expiring quarterly contract month.
+
+Though most traders and hedgers never go all the way through to delivery, it is important to understand the delivery process because the concepts and formula that define the final invoice amount drive the pricing and trading behavior of the futures contract.
