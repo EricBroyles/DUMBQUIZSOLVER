@@ -1,0 +1,51 @@
+
+*********************************************************************************
+
+Created: 2023-07-09 22:40:09
+Edited: n
+
+*********************************************************************************
+        
++++++ UNCLEAN +++++
+
+{_Q_} The 3-day delivery process for US Treasury futures includes:
+{__A} Intention Day, Notice Day, and Delivery Day
+{__A} Decision Day, Interest Day and Delivery Day
+{__A} Yield Day, Notice Day and Trade Day
+{__A} Intention Day, Yield Day and Decision Day
+
+{_Q_} True or false: CME U.S. Treasury notes and bond futures may be settled through physical delivery.
+{__A} True
+{__A} False
+
+{_Q_} True or false: An important and defining feature of US Treasury futures is that short position may deliver security for contract on any business day of the expiring quarterly contract month.
+{__A} Tue
+{__A} False
+
+{_Q_} How can a long Treasury futures holder avoid unexpected position delivery?
+{__A} By rolling a soon-to-expire long position into the next contract month
+{__A} Alllong positions are subject to unexpected delivery so long as the position is open
+{__A} By keeping a soon-to-expire long position from rolling into the next contract month
+
+
+!!!!! REFERENCE ONLY (edits to CLEAN will be ignored) !!!!!
+----- CLEAN -----
+
+{_Q_} the 3day delivery process us treasury futures includes
+{__A} intention day notice day delivery day
+{__A} decision day interest day delivery day
+{__A} yield day notice day trade day
+{__A} intention day yield day decision day
+
+{_Q_} true false cme us treasury notes bond futures may settled physical delivery
+{__A} true
+{__A} false
+
+{_Q_} true false an important defining feature us treasury futures short position may deliver security contract business day expiring quarterly contract month
+{__A} tue
+{__A} false
+
+{_Q_} how long treasury futures holder avoid unexpected position delivery
+{__A} by rolling soontoexpire long position next contract month
+{__A} alllong positions subject unexpected delivery long position open
+{__A} by keeping soontoexpire long position rolling next contract month

@@ -1,1 +1,1 @@
-answer
+self.questions, self.answers = self.format_text.getQA()

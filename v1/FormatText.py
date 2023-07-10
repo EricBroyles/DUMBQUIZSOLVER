@@ -51,9 +51,13 @@ class FormatText:
         self.unclean_answ = []
         self.clean_ques = []
         self.clean_answ = []
-        self.format_text = ""
+
+        self.format_text = self.getFormatText()
+
 
     def setQA(self, ques, answ):
+        self.clean_answ = []
+        self.clean_ques = []
         self.unclean_ques = ques
         self.unclean_answ = answ
 
@@ -67,6 +71,14 @@ class FormatText:
 
             self.clean_answ.append(temp)
 
+    def getFormatText(self):
+        file_text = ""
+
+        if self.doesExist():
+            with open(self.format_text_path, "r") as file:
+                file_text = file.read()
+
+        return file_text
 
     def convertPath(self, path):
         """
@@ -74,22 +86,21 @@ class FormatText:
         """
         return re.sub(r'\.\w+$', '', path) + ".txt"
 
-
-    def doesExist(self, path):
+    def doesExist(self):
         """
         path can be any path with any extension that matches the location of the file
         all Format_Texts will end with .txt
         """
         return os.path.exists(self.format_text_path )
     
-    def getEditStatus(self, path):
+    def getEditStatus(self):
         """
         0: false it has not been edited or created
         1: it has been edited and flagged properly by user, do not override
         2: it has been edited but not flagged by user -> prompt user to confirm
         returns 0, 1, 2
         """
-        if self.doesExist(self.format_text_path ):
+        if self.doesExist():
 
             #extract the edit status
             datetime_created, edited_flag = self.getHeaderInfo()
@@ -100,10 +111,36 @@ class FormatText:
             last_edit_timestamp = os.path.getmtime(self.format_text_path )
             last_modified = datetime.datetime.fromtimestamp(last_edit_timestamp)
 
-            if datetime_created < last_modified:
+            #to ignore the difference that occurs when writing to the file on creation
+            if (last_modified - datetime_created).total_seconds() >= 5:
                 return 2
         else:
             return 0
+    
+
+    ##WHY U NO WORK?????
+    
+    def setEditFlag(self, input_text):
+        """
+        Sets the "edited" flag to the provided input_text.
+        """
+        print("editing flag")
+        # Read the file contents
+        with open(self.format_text_path, "r") as file:
+            lines = file.readlines()
+
+        print(lines)
+        # Update the "edited" flag
+        for i, line in enumerate(lines):
+            if line.strip().startswith("Edited:"):
+                print("edit found")
+                lines[i] = f"Edited: {input_text}\n"
+                print(lines[i])
+                break
+
+        # Write the updated contents back to the file
+        with open(self.format_text_path, "w") as file:
+            file.writelines(lines)
 
     def getHeaderInfo(self):
         text = self.format_text
@@ -121,16 +158,22 @@ class FormatText:
         edited_flag = None
 
         if edited_match:
-            edited_flag = edited_match.group(1)
+            edited_flag = edited_match.group(1).lower()
 
-        return created_datetime, edited_flag.lower()
+        return created_datetime, edited_flag
     
-    def getQA(self):
+    def getQA(self, type):
         """
+        type: "CLEAN" or "UNCLEAN"
         gets for just the clean text
         """
-        text = re.search(r"----- CLEAN -----\n(.+)", self.format_text, re.DOTALL).group(1)
-        
+        unclean = r"\+\+\+\+\+ UNCLEAN \+\+\+\+\+\n(.+?)(?=\n-+ CLEAN -+)"
+        clean = r"(?:\n-+ CLEAN -+\n)\s*(.*)"
+        pattern = clean if type == "CLEAN" else unclean
+        text = re.search(pattern, self.format_text, re.DOTALL).group(1)
+
+        print(text)
+
         questions = []
         answers = []
 
@@ -173,21 +216,21 @@ class FormatText:
 
         return questions, answers
     
-    def createFormatText(self):
+    def createFormatText(self, edit_flag):
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         unclean_text = f"\n+++++ UNCLEAN +++++\n"
         for i,q in enumerate(self.unclean_ques):
-            unclean_text += '{_Q_} ' + q
+            unclean_text += '\n{_Q_} ' + q
 
             for a in self.unclean_answ[i]:
                 unclean_text += "\n"
                 unclean_text += '{__A} ' + a
             unclean_text += "\n"
             
-        clean_text = f"\n!!!!! REFERENCE ONLY (edits to CLEAN will be ignored) !!!!!\n----- CLEAN -----\n"
+        clean_text = f"\n\n!!!!! REFERENCE ONLY (edits to CLEAN will be ignored) !!!!!\n----- CLEAN -----\n"
         for i,q in enumerate(self.clean_ques):
-            clean_text += '{_Q_} ' + q
+            clean_text += '\n{_Q_} ' + q
 
             for a in self.clean_answ[i]:
                 clean_text += "\n"
@@ -195,17 +238,16 @@ class FormatText:
             clean_text += "\n"
 
         header = f"""
-        *********************************************************************************
+*********************************************************************************
 
-        Created: {timestamp}
-        Edited: n
+Created: {timestamp}
+Edited: {edit_flag}
 
-        *********************************************************************************
+*********************************************************************************
         """
 
         self.format_text = header + unclean_text + clean_text
 
-    
     def writeToPath(self):
         text = self.format_text
         with open(self.format_text_path, "w") as file:
@@ -215,6 +257,7 @@ class FormatText:
         """
         perform the following checks with getEditStatus
         """
+        edit_flag = "n"
 
         #checks
         status = self.getEditStatus()
@@ -224,18 +267,20 @@ class FormatText:
             print("The file ", self.format_text_path, " appear to have been edited and not flagged")
             ans = input("Would you like to override this file (y/n): ")
             if ans == "n":
-                print("Skip Override. Flagging Document as Edited jk way to lazy do it urself.")
-                return 0
+                print("Keeping changes and updating clean. Flagging Document as Edited.")
+                q, a = self.getQA("UNCLEAN")
+                edit_flag ="y"
+                self.setQA(q, a)
             else:
                 print('Override.')
         if status == 1:
             return 0
     
         #create the text
-        self.createFormatText()
+        self.createFormatText(edit_flag)
 
         #write to the file path
-        self.writeToPath(self)
+        self.writeToPath()
         return 1
 
         
